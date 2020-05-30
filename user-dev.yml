@@ -39,16 +39,25 @@ mybatis:
   mapper-locations: classpath*:com/neuedu/mapper/*Mapper.xml
   config-location: classpath:mybatis-config.xml
 redis:
-  host: 127.0.0.1
-  port: 6379
+  redisHost: 182.92.82.190
+  redisPort: 6379
+  redisPaaword: EMXT5201314+
   #连接超时时间（毫秒）
   timeout: 2000
-  pool:
-   #最大连接数
-   max-active: 100
-   #最大空连接
-   max-idle: 10
-   #最大阻塞等待时间（负数表示没有限制）
-   max-wait: 100000
-  datebase: 0
+  #最大连接数
+  max-active: 100
+  #最大空连接
+  maxTotal: 8
+  maxIdle: 8
+  mixIdle: 0
+  blockWhenExhausted: true
+  #最大阻塞等待时间（负数表示没有限制）
+  maxWaitMillis: 10000
+  testOnBorrow: true
+  testOnReturn: true
+  jmxEnabled: true
+  timeout: 1000
+resetpassword:
+ timeout: 60
+
    
