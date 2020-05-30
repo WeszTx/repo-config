@@ -4,5 +4,5 @@ spring:
   rabbitmq:
     host: 182.92.82.190
     port: 5672
-    username: WeszTx
-    password: EMXT5201314+
+    username: root
+    password: EMXT5201314WTXS!
