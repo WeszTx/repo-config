@@ -1,6 +1,11 @@
 server:
   port: 8080
 spring:
+  rabbitmq:
+    host: 182.92.82.190
+    port: 5672
+    username: WeszTx
+    password: EMXT5201314+
   #数据库相关配置
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -28,9 +33,28 @@ spring:
       testOnBorrow: true
       testOnReturn: true
       poolPreparedStatements: true
-      
-  
 #Mybatis
 mybatis:
   mapper-locations: classpath*:com/neuedu/mapper/*Mapper.xml
   config-location: classpath:mybatis-config.xml
+redis:
+  redisHost: 182.92.82.190
+  redisPort: 6379
+  redisPaaword: EMXT5201314+
+  #连接超时时间（毫秒）
+  timeout: 2000
+  #最大连接数
+  max-active: 100
+  #最大空连接
+  maxTotal: 8
+  maxIdle: 8
+  mixIdle: 0
+  blockWhenExhausted: true
+  #最大阻塞等待时间（负数表示没有限制）
+  maxWaitMillis: 10000
+  testOnBorrow: true
+  testOnReturn: true
+  jmxEnabled: true
+  timeout: 1000
+resetpassword:
+ timeout: 60
