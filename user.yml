@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 9080
 spring:
   rabbitmq:
     host: 182.92.82.190
@@ -38,23 +38,18 @@ mybatis:
   mapper-locations: classpath*:com/neuedu/mapper/*Mapper.xml
   config-location: classpath:mybatis-config.xml
 redis:
-  redisHost: 182.92.82.190
-  redisPort: 6379
-  redisPaaword: EMXT5201314+
-  #连接超时时间（毫秒）
-  timeout: 2000
-  #最大连接数
-  max-active: 100
-  #最大空连接
   maxTotal: 8
   maxIdle: 8
-  mixIdle: 0
+  minIdle: 0
   blockWhenExhausted: true
-  #最大阻塞等待时间（负数表示没有限制）
   maxWaitMillis: 10000
   testOnBorrow: true
   testOnReturn: true
   jmxEnabled: true
-  timeout: 1000
+  redisHost: 182.92.82.190
+  redisPort: 6379
+  redisPassword: EMXT5201314+
+  timeout: 1000  
+  
 resetpassword:
- timeout: 60
+  timeout: 60
