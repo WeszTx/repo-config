@@ -38,4 +38,4 @@ mybatis:
 timeout: 1000
 
 order: 
- timeout: 1
+  timeout: 1
