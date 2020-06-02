@@ -50,6 +50,6 @@ redis:
   redisPort: 6379
   redisPassword: EMXT5201314+
   timeout: 1000  
-  
+#设置token过期时间
 resetpassword:
   timeout: 60
